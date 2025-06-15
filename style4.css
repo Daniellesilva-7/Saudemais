@@ -1,0 +1,71 @@
+body{  
+    font-family: Arial, sans-serif;    
+    background-color: rgb(13, 176, 157);
+    }
+    
+    .agendamento {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #f8f8f8;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+    font-family: Arial, sans-serif;
+    }
+
+    .agendamento h2 {
+    text-align: center;
+    color: #00857c;
+    margin-bottom: 20px;
+    }
+
+    .form-consulta {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    }
+
+    .form-consulta label {
+    font-weight: bold;
+    color: #333;
+    }
+
+    .form-consulta input,
+    .form-consulta select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    }
+
+    .form-consulta button {
+    padding: 12px;
+    background-color: #00c896;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+    }
+
+    .form-consulta button:hover {
+    background-color: #009e77;
+    }
+
+    .alert {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      border-radius: 5px;
+      display: none;
+    }
+
+    footer{
+    margin-top: 2em;
+    color: white;
+    text-align: center;
+    padding: 2em 1em;
+    }

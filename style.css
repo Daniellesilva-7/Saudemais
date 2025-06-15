@@ -1,0 +1,228 @@
+body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: rgb(13, 176, 157);
+      color: #1a1a1a;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+      background-color: #00867d;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      color: white;
+      font-size: 24px;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    nav a:hover{
+    color: #00b4aa;
+}
+
+.logo-pulsante {
+  animation: pulsar 1.5s infinite;
+  transform-origin: center;
+}
+
+@keyframes pulsar {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 10%;
+      background-color: white;
+      margin-left: 5%;
+      margin-right: 5%;
+      border-radius: 10px;
+      margin-top: 40px;
+    }
+
+    .hero img {
+      max-width: 300px;
+      border-radius: 10px;
+    }
+
+    .hero-text {
+      max-width: 500px;
+    }
+
+    .hero-text h2 {
+      font-size: 32px;
+      color: #00867d;
+    }
+
+    .hero-text img{
+        height: 150px;
+    }
+
+    .hero-text p {
+      margin: 20px 0;
+      font-size: 16px;
+    }
+
+    .hero-text button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: rgb(13, 176, 157);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    
+    button:hover{
+	background-color: #03a5a0;
+}
+
+    .section {
+      padding: 40px 10%;
+    }
+
+    .section h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .steps, .specialties, .team {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .step, .specialty, .specialty1, .team-member {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .step img, .specialty img, .team-member img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+
+    .specialty1 img{
+      width: 60px;
+      height: 80px;
+      margin-bottom: 10px;
+    }
+
+    .team-member img {
+      width: 100px;
+      height: 100px;
+
+    }
+
+    .team-member h4 {
+      margin: 10px 0 5px;
+      font-size: 16px;
+    }
+
+    .team-member p {
+      font-size: 14px;
+      color: #666;
+    }
+
+.card {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+
+.card.aparecendo {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+    .geo-toggle {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: white;
+      margin-right: 200px;
+    }
+
+     .geo-status small {
+      color: white;
+      font-size: 16px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 34px;
+      height: 20px;
+    }
+
+    .switch input {
+      display: none;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0;
+      right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 34px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 14px;
+      width: 14px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+
+    .switch input:checked + .slider {
+      background-color: #2196F3;
+    }
+
+    .switch input:checked + .slider:before {
+      transform: translateX(14px);
+    }
+    footer {
+     margin-top: 2em;
+     background: var(--verde);
+    color: white;
+    text-align: center;
+    padding: 2em 1em;
+     }

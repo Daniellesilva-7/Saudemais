@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+    <html lang="pt-BR">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Saúde+ - Página Inicial </title>
+            <link rel = "logo" href = "image.png">
+            <link rel = "stylesheet" href = "style3.css">
+            <link href = "https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel = "stylesheet">
+        </head>
+        <body>
+            <main class="login-container">
+                <img class = "logo" src = "logo.png" alt = "Logo Saúde+">
+                <form action="/login" method="POST">
+                <div class= "input-login">
+                    <input class = "login" type="email" name="username" placeholder="Usuário" required>
+                </div>
+                <div class = "input-password">
+                <input class = "senha" type="password" name="password" placeholder="Senha" required>
+                 <span class="toggle-password" id="togglePassword"></span>
+                </div>
+                <script src = "main.js"></script>
+                <button class = "enviar" type="submit">Entrar</button>
+                </form>
+                <a class = "recovery" href= "recuperacao_senha.html"> Esqueceu a Senha? </a>
+                <label class = "connect">
+                    <input type = "checkbox" name = "remember"> <Label>Lembre-se de mim </Label> 
+                </label>
+                <p class = "registro">Não tem uma conta? <a href = "cadastro.html"> Registre-se </a><p>
+            </main>   
+        </body> 
+    </html>

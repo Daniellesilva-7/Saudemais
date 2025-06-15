@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saúde+</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+  <section id="sobre">
+    <h2>Sobre o Projeto</h2>
+    <div id="texto-carousel">
+      <p id="texto-projeto">
+        O projeto “SAÚDE+” é um aplicativo e website desenvolvidos para facilitar o acesso da população de Saquarema (RJ) a serviços de saúde.
+      </p>
+    </div>
+  </section>
+
+  <div class="card">
+    <section id="objetivos">
+      <h2>Objetivos</h2>
+      <ul>
+        <li>Melhorar o acesso à saúde com ferramentas digitais acessíveis.</li>
+        <li>Reduzir filas e tempo de espera por atendimento médico.</li>
+        <li>Oferecer uma experiência intuitiva para agendamentos médicos online.</li>
+        <li>Conectar pacientes a profissionais de saúde de forma eficiente.</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="card">
+    <section id="servicos">
+      <h2>Serviços Oferecidos</h2>
+      <ul>
+        <li>Agendamento de consultas com especialistas.</li>
+        <li>Perfil de médicos e avaliações.</li>
+        <li>Histórico de consultas e notificações.</li>
+        <li>Suporte ao usuário via chat ou telefone.</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="card">
+    <section id="mercado">
+      <h2>Análise de Mercado</h2>
+      <p>O mercado brasileiro de saúde digital cresce com a demanda por serviços ágeis. O Saúde+ atende essa necessidade ao modernizar o sistema de agendamentos médicos.</p>
+    </section>
+  </div>
+
+  <div class="card">
+    <section id="participantes">
+      <h2>Equipe do Projeto</h2>
+      <div class="participantes">
+        <div class="card1"><strong>Fabricio Lima Galisa</strong><br>Marketing e Divulgação</div>
+        <div class="card1"><strong>Ana Julia</strong><br>Sub-gerente de Projeto</div>
+        <div class="card1"><strong>Gabriel Moreira</strong><br>Gestão Operacional</div>
+        <div class="card1"><strong>Danielle Gil Silva</strong><br>Gerente de Projeto</div>
+        <div class="card1"><strong>Gabriel Junior</strong><br>Gestão Administrativa e Financeira</div>
+        <div class="card1"><strong>Jean Lucas</strong><br>Inovação e Desenvolvimento</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="card">
+    <section id="contato">
+      <h2>Contato</h2>
+      <p>Email: contato@saudemais.com.br</p>
+      <p>Telefone: (11) 99999-9999</p>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2025 Saúde+. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    const textos = [
+      "O projeto “SAÚDE+” é um aplicativo e website desenvolvidos para facilitar o acesso da população de Saquarema (RJ) a serviços de saúde. Ele permite agendamento de consultas e recebimento de exames.",
+      "Buscamos soluções que atendam às necessidades de forma acessível e funcional, promovendo eficiência, agilidade e humanização no atendimento público de saúde."
+    ];
+
+    let i = 0;
+    setInterval(() => {
+      i = (i + 1) % textos.length;
+      document.getElementById("texto-projeto").innerText = textos[i];
+    }, 5000);
+
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('aparecendo');
+          }, 200 * i);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    cards.forEach(card => observer.observe(card));
+  </script>
+</body>
+</html>

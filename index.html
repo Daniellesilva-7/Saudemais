@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saúde+</title>
+' <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Saúde+</h1>
+    <nav>
+      <a href="#">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="contato.html">Contato</a>
+      <a href="login.html">Entrar</a>
+    </nav>
+    <div class="geo-toggle">
+      <span class="geo-status" id="geo-status">Localização desligada <br> Clique ao lado para ativar</span>
+      <label class="switch">
+        <input type="checkbox" id="geo-switch" onchange="toggleLocation()">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </header>
+  <script>
+    function toggleLocation() {
+      const checkbox = document.getElementById('geo-switch');
+      const statusText = document.getElementById('geo-status');
+
+      if (checkbox.checked) {
+        statusText.textContent = 'Localizado em Saquarema - RJ';
+      } 
+      else {
+         statusText.innerHTML = 'Localização desligada<br><small>Clique ao lado para ativar</small>';
+      }
+    }
+  </script>
+
+  <section class="hero">
+    <div class="hero-text">
+      <img src="logo.png" class="logo-pulsante">
+      <h2>Cuidar da sua saúde nunca foi tão fácil</h2>
+      <p>Agende consultas de forma rápida e fácil, no conforto da sua casa.</p>
+      <a href="agendamento_consulta.html"><button>Agendar Consulta</button></a>
+    </div>
+    <img src="destaque.jpg" alt="Paciente feliz">
+  </section>
+
+  <section class="section">
+    <h3>Como Funciona</h3>
+    <div class="steps">
+      <div class="step">
+        <img src="https://img.icons8.com/ios-filled/50/stethoscope.png" alt="Especialidade">
+        <p>Escolha a especialidade</p>
+      </div>
+      <div class="step">
+        <img src="https://img.icons8.com/ios-filled/50/calendar.png" alt="Calendário">
+        <p>Selecione a data e horário</p>
+      </div>
+      <div class="step">
+        <img src="https://img.icons8.com/ios-filled/50/checked-user-male.png" alt="Confirmação">
+        <p>Confirme a consulta</p>
+      </div>
+    </div>
+  </section>
+  <div class="card">
+  <section class="section">
+    <h3>Especialidades</h3>
+    <div class="specialties">
+      <div class="specialty">
+        <img src="https://img.icons8.com/ios-filled/50/heart-with-pulse.png" alt="Cardiologia">
+        <p>Cardiologia</p>
+      </div>
+      <div class="specialty">
+        <img src="https://img.icons8.com/ios-filled/50/baby.png" alt="Pediatria">
+        <p>Pediatria</p>
+      </div>
+      <div class="specialty">
+        <img src="dermatologia.png" alt="Dermatologia">
+        <p>Dermatologia</p>
+      </div>
+      <div class="specialty1">
+        <img src="ortopedia2.png" alt="Ortopedia" >
+        <p>Ortopedia</p>
+      </div>
+    </div>
+    </div>
+  </section>
+  <div class="card">
+  <section class="section">
+    <h3>Especialistas</h3>
+    <div class="team">
+      <div class="team-member">
+        <img src="medico4.jpg" alt="Dr. Carlos">
+        <h4>Dr. Carlos Ferreira</h4>
+        <p>Cardiologista</p>
+      </div>
+      <div class="team-member">
+        <img src="medico6.jpg" alt="Dra. Ana">
+        <h4>Dra. Ana Oliveira</h4>
+        <p>Pediatra</p>
+      </div>
+      <div class="team-member">
+        <img src="medico3.jpg" alt="Dr. Lucas">
+        <h4>Dr. Lucas Mendes</h4>
+        <p>Dermatologista</p>
+      </div>
+    </div>
+  </section>
+  </div>
+  </div>
+    <script>
+    const cards = document.querySelectorAll('.card');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+            // Atraso inicial + atraso em cascata
+            setTimeout(() => {
+            entry.target.classList.add('aparecendo');
+            }, 500 + i * 200); // Espera 500ms antes da primeira animação, depois vai em cascata
+        }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    cards.forEach(card => observer.observe(card));
+    </script>
+    <footer>
+    <p>© 2025 Saúde+. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
